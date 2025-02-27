@@ -33,10 +33,7 @@ void ScalarConverter::convert(const std::string literal)
             std::cout << "double: " << static_cast<double>(i) << std::endl;
             return;
         }
-    } catch (...)
-    {
-        std::cout << "int: impossible" << std::endl;
-    }
+    } catch (...) {}
     
     try {
         size_t pos;
@@ -48,10 +45,7 @@ void ScalarConverter::convert(const std::string literal)
             std::cout << "double: " << static_cast<double>(f) << std::endl;
             return;
         }
-    } catch (...)
-    {
-        std::cout << "char: impossible" << std::endl;
-    }
+    } catch (...) {}
     
     try {
         double d = std::stod(literal);
@@ -60,14 +54,12 @@ void ScalarConverter::convert(const std::string literal)
         std::cout << "float: " << static_cast<float>(d) << "f" << std::endl;
         std::cout << "double: " << d << std::endl;
         return;
-    } catch (...)
-    {
-        std::cout << "float: impossible" << std::endl;
-    }
+    } catch (...) {}
+    
     std::cout << "Invalid input" << std::endl;
 }
 
 int main()
 {
-    ScalarConverter::convert("-42");
+    ScalarConverter::convert("'c'");
 }
