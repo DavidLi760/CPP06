@@ -1,13 +1,14 @@
-NAME = EasyFind
-CC = c++
-CFLAGS = -Wall -Wextra -Werror
-SRCS = main.cpp
+NAME = ScalarConverter
+CXX = c++
+CXXFLAGS = -Wall -Wextra -Werror
+SRCS =	main.cpp\
+		ScalarConverter.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 all : $(NAME)
 
 $(NAME) : $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
 clean :
 	rm -rf $(OBJS)
