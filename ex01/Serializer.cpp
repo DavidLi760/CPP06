@@ -23,13 +23,13 @@ Serializer& Serializer::operator=(const Serializer& other)
     return (*this);
 }
 
-uintptr_t Serializer::serialize(Data* ptr)
+unsigned long Serializer::serialize(Data* ptr)
 {
-    return reinterpret_cast<uintptr_t>(ptr);
+    return reinterpret_cast<unsigned long>(ptr);
 }
 
 
-Data* Serializer::deserialize(uintptr_t raw)
+Data* Serializer::deserialize(unsigned long raw)
 {
     return reinterpret_cast<Data*>(raw);
 }

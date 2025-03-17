@@ -4,7 +4,7 @@ int main() {
     Data data = {42, "Test Data"};
 
     std::cout << "ID: " << data.id << ", Name: " << data._name << std::endl;
-    uintptr_t raw = Serializer::serialize(&data);
+    unsigned long raw = Serializer::serialize(&data);
     std::cout << "Serialized value: " << raw << "\n" << std::endl;
 
     Data* deserializedData = Serializer::deserialize(raw);
